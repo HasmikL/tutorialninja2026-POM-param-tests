@@ -13,18 +13,10 @@ export class TopSliderPage {
     }
 
     async nextButton() {
-    if (await this.page.getByRole('link', { name: 'iPhone' }).nth(1).isVisible()) {
-      await this.page.locator('.swiper-button-next').first().click();
-      await expect(this.page.getByRole('img', { name: 'MacBookAir' }).nth(1)).toBeVisible();
-    } else {
-      await this.page.locator('.swiper-button-next').first().click();
-      await expect(this.page.getByRole('img', { name: 'iPhone' }).nth(1)).toBeVisible();
+        await this.page.locator('.swiper-button-next').first().click();
     }
-  }
 
-  async prevButton() {
-    await this.page.locator('.swiper-button-prev').first().click();
-    await expect(this.page.getByRole('link', { name: 'iPhone' }).first()).toBeVisible();
-  }
-
+    async prevButton() {
+        await this.page.locator('.swiper-button-prev').first().click();
+    }
 }

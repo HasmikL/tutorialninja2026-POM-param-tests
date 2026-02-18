@@ -10,18 +10,26 @@ test.beforeEach(async ({ page }) => {
   topSliderPage = new TopSliderPage(page);
 });
 
-test.describe('Top Slider', () => {
+test.describe.only('Top Slider', () => {
 
-    test('Next slider', async () => {
-  await basePage.open();
-  await topSliderPage.nextButton();
-});
+  test('Next slider', async ({ page }) => {
+    await basePage.open();
+    await topSliderPage.nextButton();
 
-    test('Prev Button Testing', async () => {
+    // Expect the correct image after next
+    if (await page.getByRole('link', { name: 'iPhone' }).nth(1).isVisible()) {
+      await expect(page.getByRole('img', { name: 'MacBookAir' }).nth(1)).toBeVisible();
+    } else {
+      await expect(page.getByRole('img', { name: 'iPhone' }).nth(1)).toBeVisible();
+    }
+  });
+
+  test('Prev Button Testing', async ({ page }) => {
     await basePage.open();
     await topSliderPage.prevButton();
 
-    });
-
+    // Expect the correct image after prev
+    await expect(page.getByRole('link', { name: 'iPhone' }).first()).toBeVisible();
+  });
 
 });
