@@ -95,15 +95,23 @@ tutorialninja2026-POM-param-tests/
 │
 ├── .github/workflows/    → CI configuration
 └── playwright.config.ts
+
+
 🔧 Installation
+
 📥 1. Clone the repository
 git clone https://github.com/HasmikL/tutorialninja2026-POM-param-tests.git
+
 📁 2. Navigate to project folder
 cd tutorialninja2026-POM-param-tests
+
 📦 3. Install dependencies
 npm install
+
 📌 4. Install Playwright browsers
 npx playwright install
+
+
 🚀 Running Tests
 Run all tests
 npx playwright test
@@ -117,6 +125,7 @@ npx playwright show-report
 
 
 🧪 Test Coverage
+
 ✅ Login
 
 Validate authentication flow
