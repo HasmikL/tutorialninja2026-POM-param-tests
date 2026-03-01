@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { BasePage } from '../../tutorialninja_2026_POM/pages/BasePage';
-import { MenuPage } from '../../tutorialninja_2026_POM/pages/MenuPage';
+import { BasePage } from '../pages/BasePage';
+import { MenuPage } from '../pages/MenuPage';
 
 let basePage: BasePage;
 let menuPage: MenuPage;
@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
 
 test.skip(({browserName})=> browserName == 'webkit', 'Skip webit');
 
-test.describe.only('Desktop Test @menu',()=>{
+test.describe('Desktop Test @menu',()=>{
 
 test('Test PC @menu',async({page})=>{
 
