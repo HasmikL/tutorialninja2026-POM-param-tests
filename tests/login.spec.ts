@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../../tutorialninja_2026_POM/pages/LoginPage';
+import { LoginPage } from '../pages/LoginPage';
 
 let loginPage: LoginPage;
 
