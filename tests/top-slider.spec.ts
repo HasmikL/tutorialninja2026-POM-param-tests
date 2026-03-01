@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { BasePage } from '../../tutorialninja_2026_POM/pages/BasePage';
+import { BasePage } from '../pages/BasePage';
 import { TopSliderPage } from '../pages/TopSliderPage';
 
 let basePage: BasePage;
@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
   topSliderPage = new TopSliderPage(page);
 });
 
-test.describe.only('Top Slider @top_slider', () => {
+test.describe('Top Slider @top_slider', () => {
 
   test('Next slider @top_slider', async ({ page }) => {
     await basePage.open();
