@@ -68,34 +68,17 @@ Include parameterized scenarios
 Support cross-browser execution
 
 🛠 Tech Stack
+
 Technology	Purpose
+
 Playwright	UI automation framework
+
 TypeScript	Type safety & maintainability
+
 Node.js & npm	Dependency management
+
 GitHub Actions	CI pipeline execution
 HTML Reporter	Test reporting
-📂 Project Structure
-tutorialninja2026-POM-param-tests/
-│
-├── pages/                → Page Object classes
-│   ├── BasePage.ts
-│   ├── LoginPage.ts
-│   ├── MenuPage.ts
-│   ├── CurrencyPage.ts
-│   ├── SearchPage.ts
-│   └── TopSliderPage.ts
-│
-├── tests/                → Test specifications
-│   ├── login.spec.ts
-│   ├── menu.spec.ts
-│   ├── currency.spec.ts
-│   ├── search.spec.ts
-│   ├── top-slider.spec.ts
-│   └── *.param.spec.ts
-│
-├── .github/workflows/    → CI configuration
-└── playwright.config.ts
-
 
 🔧 Installation
 
