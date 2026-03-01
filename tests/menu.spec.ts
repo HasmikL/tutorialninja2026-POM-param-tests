@@ -14,9 +14,9 @@ test.beforeEach(async ({ page }) => {
 
 test.skip(({browserName})=> browserName == 'webkit', 'Skip webit');
 
-test.describe.only('Desktop Test',()=>{
+test.describe.only('Desktop Test @menu',()=>{
 
-test('Test PC',async({page})=>{
+test('Test PC @menu',async({page})=>{
 
  await menuPage.openCategoryFromMenu('Desktops','PC (0)');
 
@@ -28,7 +28,7 @@ test('Test PC',async({page})=>{
 
 });
 
-test( 'Mac Test', async({page})=>{
+test( 'Mac Test @menu', async({page})=>{
 
   await menuPage.openCategoryFromMenu('Desktops','Mac (1)');
   await menuPage.expectTitleandUrl('Mac','https://tutorialsninja.com/demo/index.php?route=product/category&path=20_27')
@@ -36,7 +36,7 @@ test( 'Mac Test', async({page})=>{
     
 });
 
-test('ShowAllDesktops Test',async({page})=>{
+test('ShowAllDesktops Test @menu',async({page})=>{
 
   await menuPage.openCategoryFromMenu('Desktops','Show AllDesktops');
   await menuPage.expectTitleandUrl('Desktops','https://tutorialsninja.com/demo/index.php?route=product/category&path=20')
@@ -45,9 +45,9 @@ test('ShowAllDesktops Test',async({page})=>{
 });
 });
 
-test.describe('Laptops & Notebooks',()=>{
+test.describe('Laptops & Notebooks @menu',()=>{
     
-    test('Macs Test',async({page})=>{
+    test('Macs Test @menu',async({page})=>{
 
       await menuPage.openCategoryFromMenu('Laptops & Notebooks','Macs (0)');
       await menuPage.expectTitleandUrl('Macs','https://tutorialsninja.com/demo/index.php?route=product/category&path=18_46');
@@ -57,7 +57,7 @@ test.describe('Laptops & Notebooks',()=>{
 });
 
 
-test('Windows',async({page})=>{
+test('Windows @menu',async({page})=>{
 
   await menuPage.openCategoryFromMenu('Laptops & Notebooks','Windows (0)');
   await menuPage.expectTitleandUrl('Windows','https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45');
@@ -67,7 +67,7 @@ test('Windows',async({page})=>{
  
 });
 
-test('Show All Laptops & NoteBooks',async({page})=>{
+test('Show All Laptops & NoteBooks @menu',async({page})=>{
   await page.getByRole('link', { name: 'Laptops & Notebooks', exact: true }).hover();
   await page.getByRole('link', { name: 'Show AllLaptops & Notebooks' }).click();
 
@@ -80,7 +80,7 @@ test('Show All Laptops & NoteBooks',async({page})=>{
 });
 
 
-test.describe('Component Test',()=>{
+test.describe('Component Test @menu',()=>{
     
     test('Mice and Trackballs Test',async({page})=>{
 

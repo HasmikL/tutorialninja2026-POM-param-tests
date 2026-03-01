@@ -10,9 +10,9 @@ test.beforeEach(async ({ page }) => {
 
 test.skip(({ browserName }) => browserName === 'webkit', 'Skipping wibkit on Windows');
 
-test.describe('LOGIN', () => {
+test.describe('LOGIN @login', () => {
 
-  test('Login with valid email and valid password', async ({ page }) => {
+  test('Login with valid email and valid password @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -31,7 +31,7 @@ test.describe('LOGIN', () => {
     await expect(page).toHaveTitle('Account Logout');
   });
 
-  test('User remains logged in after refreshing the page', async ({ page }) => {
+  test('User remains logged in after refreshing the page @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -59,7 +59,7 @@ const negativeTerms = [
 ];
 
 
-  test('Valid email and invalid password', async ({ page }) => {
+  test('Valid email and invalid password @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -71,7 +71,7 @@ const negativeTerms = [
     await loginPage.expectWarningMessage();
   });
 
-  test('Invalid email and valid password', async ({ page }) => {
+  test('Invalid email and valid password @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -83,7 +83,7 @@ const negativeTerms = [
     await loginPage.expectWarningMessage();
   });
 
-  test('Invalid email and invalid password', async ({ page }) => {
+  test('Invalid email and invalid password @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -95,7 +95,7 @@ const negativeTerms = [
     await loginPage.expectWarningMessage();
   });
 
-  test('Empty email and empty password', async ({ page }) => {
+  test('Empty email and empty password @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -107,7 +107,7 @@ const negativeTerms = [
     await loginPage.expectWarningMessage();
   });
 
-  test('Empty email and filled password', async ({ page }) => {
+  test('Empty email and filled password @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -119,7 +119,7 @@ const negativeTerms = [
     await loginPage.expectWarningMessage();
   });
 
-  test('Filled email and empty password', async ({ page }) => {
+  test('Filled email and empty password @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -131,7 +131,7 @@ const negativeTerms = [
     await loginPage.expectWarningMessage();
   });
 
-  test('Invalid email format', async ({ page }) => {
+  test('Invalid email format @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();
@@ -143,7 +143,7 @@ const negativeTerms = [
     await loginPage.expectWarningMessage();
   });
 
-  test('Email with leading and trailing spaces', async ({ page }) => {
+  test('Email with leading and trailing spaces @login', async ({ page }) => {
 
     // ------ Navigate to Login page ------
     await loginPage.openLoginPage();

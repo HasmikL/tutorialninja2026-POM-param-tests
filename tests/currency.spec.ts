@@ -13,19 +13,19 @@ test.beforeEach(async({page})=>{
 
 test.skip( ({browserName})=> browserName === 'webkit', 'Skipping wibkit on Windows');
 
-test.describe('CURRECY', ()=>{
+test.describe('CURRECY @currency', ()=>{
 
-    test('USD Dollar $', async({page})=>{
+    test('USD Dollar $ @currency', async({page})=>{
         await currencyPage.changeCurrentCurrency('$US Dollar');    
         await currencyPage.expectProductCurrency('$');
     });
 
-    test('EURO €', async({page})=>{
+    test('EURO € @currency', async({page})=>{
         await currencyPage.changeCurrentCurrency('€Euro');  
         await currencyPage.expectProductCurrency('€');        
     });
 
-    test('POUND STERLING £', async({page})=>{
+    test('POUND STERLING £ @currency', async({page})=>{
         await currencyPage.changeCurrentCurrency('£Pound Sterling'); 
         await currencyPage.expectProductCurrency('£'); 
     });

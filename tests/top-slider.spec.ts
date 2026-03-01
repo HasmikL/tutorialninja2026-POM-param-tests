@@ -10,9 +10,9 @@ test.beforeEach(async ({ page }) => {
   topSliderPage = new TopSliderPage(page);
 });
 
-test.describe.only('Top Slider', () => {
+test.describe.only('Top Slider @top_slider', () => {
 
-  test('Next slider', async ({ page }) => {
+  test('Next slider @top_slider', async ({ page }) => {
     await basePage.open();
     await topSliderPage.nextButton();
 
@@ -24,7 +24,7 @@ test.describe.only('Top Slider', () => {
     }
   });
 
-  test('Prev Button Testing', async ({ page }) => {
+  test('Prev Button Testing @top_slider', async ({ page }) => {
     await basePage.open();
     await topSliderPage.prevButton();
 
